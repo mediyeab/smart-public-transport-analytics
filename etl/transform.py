@@ -186,8 +186,8 @@ def transform_addis_trips(df: DataFrame) -> DataFrame:
         df = df.withColumn("day_of_week", F.expr("((dayofweek(operating_day)+5)%7)+1").cast("int"))
 
     df = df.withColumn("source", F.lit("addis_csv"))
-
-    df = df.select(
+df = df.select(
+    
         "source",
         "trip_id",
         "route_id",
