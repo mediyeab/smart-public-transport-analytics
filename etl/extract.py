@@ -43,10 +43,10 @@ def discover_sources(raw_dir: Path) -> ExtractedSources:
     """
 
     csv_candidates = sorted(raw_dir.rglob("*.csv"))
-
-    schema_a: List[Path] = []
+schema_a: List[Path] = []
     schema_b: List[Path] = []
 
+    
     for p in csv_candidates:
         # Peek at the header row to determine schema
         try:
